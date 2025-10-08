@@ -1,0 +1,142 @@
+/* Add Playfair Display Light font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Playfair', serif;
+    font-weight: 300;
+    display: flex;
+    min-height: 100vh;
+    background-color: #D9F5EE;
+}
+nav {
+    width: 100%;
+    background: #558B6D;
+    color: #fff;
+    padding: 0.1em 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    font-family: 'Poppins', sans-serif;
+    font-size:1.5em;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0 1em;
+}
+
+nav ul .logo {
+    margin-right: auto;
+    margin-left: 0;
+    padding: 0;
+}
+
+nav ul .logo a {
+    font-size: 1.8em;
+    font-family: 'Playfair', serif;
+}
+
+nav ul li:not(.logo) {
+    margin-left: 2em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-weight:300;
+}        
+.container {
+    display: flex;
+    width: 100%;
+    margin-top: 60px; /* height of navbar */
+}
+.sidebar {
+    width: 28%;
+    min-height: calc(100vh - 60px);
+    padding-right: 8em;
+}
+.class-box {
+    padding-left: 1em;
+    padding-top: 1em;
+    text-align: right;
+    text-decoration: none;
+    color: white;
+    height:6em;
+}
+
+.class-box h3 {
+    margin-top: 0;
+    text-align: left;
+    font-size: 2.3rem;
+    font-weight: 300;
+}
+
+.class-box a {
+    text-decoration: none;
+    color: #0A2342;
+    z-index: 1;
+    padding: 0.5em;
+    margin: -0.5em;
+}
+
+
+.class-box h4 {
+    font-size: 1.9rem;
+    position:relative;
+    top: -1.6em;
+    font-weight: 300;
+}
+
+main {
+    flex: 1;
+    padding: 0.5em;
+}
+.announcements {
+    font-weight: 300;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    padding-right: 0.5em;
+}
+.announcements h2 {
+    font-family: 'Playfair', serif;
+    font-weight: 300;
+    font-size: 2.3rem;
+    text-align: right;
+    margin-top: 0;
+    height: 0.2em;
+}
+.announcements h3 {
+    font-family: 'Playfair', serif;
+    font-weight: 300;
+    font-size: 1.9rem;
+    margin-bottom: 1.5em;
+}
+
+.covers {
+    display:none;
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        box-shadow: none;
+    }
+    .class-box {
+        margin-bottom: 1em;
+    }
+    .announcements {
+        font-size: 1em;
+    }
+}
