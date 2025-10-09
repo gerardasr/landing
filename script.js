@@ -1,16 +1,36 @@
-const links = document.querySelector('.class-box');
-const covers = document.querySelector('.covers');
-const announcements = document.querySelectorAll('.announcements');
+// Get all class-box elements with data-index 1-4
+const classBoxes = document.querySelectorAll('.class-box[data-index]');
+const announcements = document.querySelector('.announcements');
 
-links.forEach(link => {
-    link.addEventListener('mouseenter', () => {
-        const index = links.dataset.index;
+// Create image elements for each index (1-4)
+const images = {};
+for (let i = 1; i <= 4; i++) {
+  const img = document.createElement('img');
+  img.src = `covers/cover${i}.jpg`; // Update with your actual image paths
+  img.alt = `Image ${i}`;
+  img.className = 'hover-image';
+  img.style.display = 'none';
+  img.dataset.index = i;
+  
+  // Insert after announcements element
+  announcements.parentNode.insertBefore(img, announcements.nextSibling);
+  images[i] = img;
+}
 
-        announcements.style.display = 'none';
-
-        const target = document.querySelector('.covers[data-index="${index}"]');
-        if (target) target.style.display = 'flex';
+// Add hover listeners to each class-box
+classBoxes.forEach(box => {
+  const index = box.dataset.index;
+  
+  // Only handle elements with index 1-4
+  if (index >= 1 && index <= 4) {
+    box.addEventListener('mouseenter', () => {
+      announcements.style.display = 'none';
+      images[index].style.display = 'block';
     });
-
-
-})
+    
+    box.addEventListener('mouseleave', () => {
+      images[index].style.display = 'none';
+      announcements.style.display = 'block';
+    });
+  }
+});

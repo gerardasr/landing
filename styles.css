@@ -8,6 +8,7 @@ body {
     display: flex;
     min-height: 100vh;
     background-color: #D9F5EE;
+    overflow:hidden;
 }
 nav {
     width: 100%;
@@ -57,11 +58,13 @@ nav ul li a {
     display: flex;
     width: 100%;
     margin-top: 60px; /* height of navbar */
+    overflow: hidden;
 }
 .sidebar {
     width: 28%;
-    min-height: calc(100vh - 60px);
-    padding-right: 8em;
+    height: calc(100vh - 60px);
+    padding-right: 3em;
+    overflow-y: scroll;
 }
 .class-box {
     padding-left: 1em;
@@ -70,6 +73,12 @@ nav ul li a {
     text-decoration: none;
     color: white;
     height:6em;
+}
+
+.class-box:hover {
+    font-style:italic;
+    text-decoration:wavy underline;
+    text-decoration-color: #0A2342;
 }
 
 .class-box h3 {
@@ -95,16 +104,62 @@ nav ul li a {
     font-weight: 300;
 }
 
+.issue {
+    padding-left: 1em;
+    padding-top: 1em;
+    text-align: left;
+    color: white;
+    height:6em;
+    
+}
+
+.issue a {
+    text-decoration: none;
+    color: #0A2342;
+    z-index: 1;
+    padding: 0.5em;
+    margin: -0.5em;
+}
+
+.issue h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-top: 0;
+}
+.issue h4 {
+    position: relative;
+    text-align:right;
+    top: -1.4em;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
 main {
-    flex: 1;
+    flex: 3;
     padding: 0.5em;
 }
+
+aside {
+    flex: 1;
+}
+
 .announcements {
     font-weight: 300;
     font-size: 1.1rem;
     font-family: 'Poppins', sans-serif;
     padding-right: 0.5em;
+    padding-left: 3em;
+    overflow-y: scroll;
+    height:100vh;
+    scrollbar-color: #0A2342;
+    scrollbar-width: thin;
+    direction: rtl; 
 }
+
+.announcements > * {
+  direction: ltr; 
+}
+
 .announcements h2 {
     font-family: 'Playfair', serif;
     font-weight: 300;
@@ -120,8 +175,27 @@ main {
     margin-bottom: 1.5em;
 }
 
-.covers {
-    display:none;
+
+.announcements .isbn{
+    font-size: 1.1em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ci {
+    width: 45%;
+}
+
+.co {
+    width: 100%;
+}
+
+.ed {
+    width:50%;
+    right:50%;
+    position:relative;
+
 }
 
 @media (max-width: 800px) {
