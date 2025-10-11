@@ -26,6 +26,9 @@ classBoxes.forEach(box => {
     box.addEventListener('mouseenter', () => {
       announcements.style.display = 'none';
       images[index].style.display = 'block';
+      images[index].style.width = '90%';
+      images[index].style.position = 'relative';
+      images[index].style.left = '5em' // Adjust size as needed
     });
     
     box.addEventListener('mouseleave', () => {
