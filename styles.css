@@ -198,6 +198,31 @@ aside {
 
 }
 
+.about-main {
+    overflow: scroll;
+    height: 80vw;
+}
+.about {
+    margin-top:2%;
+}
+
+.about p, .about ul {
+    position:relative;
+    left: 30%;
+    
+}
+
+.about h4 {
+    position: relative;
+    left: 10%;
+}
+
+.about h3 {
+    position:relative;
+    left: 5%;
+}
+
+
 @media (max-width: 800px) {
     .container {
         flex-direction: column;
