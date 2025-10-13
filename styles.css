@@ -199,27 +199,38 @@ aside {
 }
 
 .about-main {
-    overflow: scroll;
-    height: 80vw;
+    overflow-y: scroll;
+    height: calc(100vh - 60px);
 }
 .about {
-    margin-top:2%;
+    margin-top:2em;
+    margin-left:1em;
+    overflow-x:hidden;
+
 }
 
 .about p, .about ul {
     position:relative;
     left: 30%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    width: 60vw;
     
 }
 
 .about h4 {
     position: relative;
-    left: 10%;
+    top:4.5rem;
+    left: 18%;
+    font-size:2rem;
+    font-weight: 300;
+    width:7rem;
 }
 
 .about h3 {
     position:relative;
-    left: 5%;
+    font-size: 2.3rem;
+    font-weight: 300;
 }
 
 
