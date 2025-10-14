@@ -2,38 +2,36 @@
 const classBoxes = document.querySelectorAll('.class-box[data-index]');
 const announcements = document.querySelector('.announcements');
 
-// Create image elements for each index (1-4)
-const images = {};
+// Store image URLs for each index (1-4)
+const imageUrls = {};
 for (let i = 1; i <= 4; i++) {
-  const img = document.createElement('img');
-  img.src = `covers/cover${i}.jpg`; // Update with your actual image paths
-  img.alt = `Image ${i}`;
-  img.className = 'hover-image';
-  img.style.display = 'none';
-  img.dataset.index = i;
-  
-  // Insert after announcements element
-  announcements.parentNode.insertBefore(img, announcements.nextSibling);
-  images[i] = img;
+  imageUrls[i] = `covers/cover${i}.jpg`;
 }
+const nav = document.querySelector('nav');
+
 
 // Add hover listeners to each class-box
 classBoxes.forEach(box => {
   const index = box.dataset.index;
-  
   // Only handle elements with index 1-4
   if (index >= 1 && index <= 4) {
     box.addEventListener('mouseenter', () => {
       announcements.style.display = 'none';
-      images[index].style.display = 'block';
-      images[index].style.width = '90%';
-      images[index].style.position = 'relative';
-      images[index].style.left = '5em' // Adjust size as needed
+      // Set background image on parent container or body
+      document.body.style.backgroundImage = `url('${imageUrls[index]}')`;
+      document.body.style.backgroundSize = 'cover';
+      document.body.style.backgroundPosition = 'center';
+      document.body.style.backgroundRepeat = 'no-repeat';
+      nav.style.opacity = '0.3'; // Set desired opacity
+      box.style.background = 'white';
+      box.style.padding = '1.1em';
     });
-    
     box.addEventListener('mouseleave', () => {
-      images[index].style.display = 'none';
+      document.body.style.backgroundImage = '';
       announcements.style.display = 'block';
+      nav.style.opacity = '1';
+      box.style.background = 'transparent';
+      box.style.padding = '1.0em';
     });
   }
 });

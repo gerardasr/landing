@@ -7,12 +7,12 @@ body {
     font-weight: 300;
     display: flex;
     min-height: 100vh;
-    background-color: #D9F5EE;
+    background-color: #EEF4F6;
     overflow:hidden;
 }
 nav {
     width: 100%;
-    background: #558B6D;
+    background: #4368A6;
     color: #fff;
     padding: 0.1em 0;
     position: fixed;
