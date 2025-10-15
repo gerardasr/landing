@@ -7,12 +7,12 @@ body {
     font-weight: 300;
     display: flex;
     min-height: 100vh;
-    background-color: #EEF4F6;
+    background-color: #F7F7F6;
     overflow:hidden;
 }
 nav {
     width: 100%;
-    background: #4368A6;
+    background: #7D856F;
     color: #fff;
     padding: 0.1em 0;
     position: fixed;
@@ -35,6 +35,13 @@ nav ul .logo {
     margin-right: auto;
     margin-left: 0;
     padding: 0;
+}
+
+nav ul .logo img {
+    height: 0.8em;
+    position: absolute;
+    top: 0.9em;
+    left:7.5em;
 }
 
 nav ul .logo a {
@@ -107,6 +114,7 @@ nav ul li a {
 .issue {
     padding-left: 1em;
     padding-top: 1em;
+    padding-bottom:1em;
     text-align: left;
     color: white;
     height:6em;
@@ -119,6 +127,39 @@ nav ul li a {
     z-index: 1;
     padding: 0.5em;
     margin: -0.5em;
+}
+
+.issue .the h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.issue .the h4 {
+    position: relative;
+    text-align:right;
+    top: -1.4em;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.issue .the {
+    text-decoration: underline;
+    font-style: italic;
+    text-decoration-color: #0A2342;
+}
+
+.the-issue {
+    text-decoration: underline;
+    font-style: italic;
+    text-decoration-color: #0A2342;
+}
+
+.issue:hover {
+    text-decoration: underline;
+    font-style: italic;
+    text-decoration-color: #0A2342;
+    
 }
 
 .issue h3 {
@@ -232,7 +273,48 @@ aside {
     font-size: 2.3rem;
     font-weight: 300;
 }
+.article {
+    height:100vw;
+    padding-right:1em;
+}
 
+.content{
+    display:flex;
+    padding-bottom:3em;
+}
+.authors {
+    margin-top:3em;
+    flex:1;
+}
+
+.authors img {
+    width:100%;
+}
+
+.authors:first-child {
+    margin-right:4em;
+} 
+
+.orcid {
+    text-align: right;
+}
+.doi {
+    position:relative;
+    bottom: -4em;
+}
+
+.bio-title {
+    text-align: right;
+}
+
+.site {
+    text-align: right;
+}
+.site a{
+    text-align: right;
+    text-decoration: none;
+    color: #0A2342;
+}
 
 @media (max-width: 800px) {
     .container {
