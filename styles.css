@@ -66,13 +66,26 @@ nav ul li a {
     width: 100%;
     margin-top: 60px; /* height of navbar */
     overflow: hidden;
+
 }
 .sidebar {
     width: 28%;
     height: calc(100vh - 60px);
     padding-right: 3em;
     overflow-y: scroll;
+    position:relative;
 }
+
+.sidebar::before {
+  content: "";
+  top:20px;
+  height:30vw;
+  width:1px;
+  position:absolute;
+  left:99%;
+  background-color: #0A2342;
+}
+
 .class-box {
     padding-left: 1em;
     padding-top: 1em;
@@ -80,6 +93,7 @@ nav ul li a {
     text-decoration: none;
     color: white;
     height:6em;
+    
 }
 
 .class-box:hover {
@@ -190,15 +204,8 @@ aside {
     font-family: 'Poppins', sans-serif;
     padding-right: 0.5em;
     padding-left: 3em;
-    overflow-y: scroll;
+    overflow-y: auto;
     height:100vh;
-    scrollbar-color: #0A2342;
-    scrollbar-width: thin;
-    direction: rtl; 
-}
-
-.announcements > * {
-  direction: ltr; 
 }
 
 .announcements h2 {
@@ -222,6 +229,17 @@ aside {
     margin-top: 3em;
     margin-bottom: 3em;
     font-family: 'Poppins', sans-serif;
+    position:relative;
+}
+
+.isbn::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5em;
+  right: 0;
+  width: 50vw;
+  height:1px;
+  background: black;
 }
 
 .ci {
@@ -233,9 +251,7 @@ aside {
 }
 
 .ed {
-    width:50%;
-    right:50%;
-    position:relative;
+    width: 50%;
 
 }
 
