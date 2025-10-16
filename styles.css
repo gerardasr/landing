@@ -72,7 +72,7 @@ nav ul li a {
     width: 28%;
     height: calc(100vh - 60px);
     padding-right: 3em;
-    overflow-y: scroll;
+    overflow-y: auto;
     position:relative;
 }
 
@@ -256,7 +256,7 @@ aside {
 }
 
 .about-main {
-    overflow-y: scroll;
+    overflow-y: auto;
     height: calc(100vh - 60px);
 }
 .about {
@@ -290,8 +290,9 @@ aside {
     font-weight: 300;
 }
 .article {
-    height:100vw;
+    height:120vw;
     padding-right:1em;
+    overflow-y:none;
 }
 
 .content{
